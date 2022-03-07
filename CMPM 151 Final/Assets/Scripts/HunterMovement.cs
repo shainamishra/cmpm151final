@@ -8,6 +8,11 @@ public class HunterMovement : MonoBehaviour
     public Animator animator;
 
     public GameObject hunterON;
+
+    public GameObject player1;
+    public GameObject player2;
+    public GameObject player3;
+    public GameObject player4;
     
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -31,6 +36,25 @@ public class HunterMovement : MonoBehaviour
 
             // Move
             move();
+
+            // swapping
+            if (Input.GetKeyDown("space"))
+            {
+                //swap();
+            }
+        }
+
+    }
+
+    void swap()
+    {
+        if (player3.activeSelf == true && (Input.GetKeyDown("space")))
+        {
+            Debug.Log("in hunter script 1");
+            player1.SetActive(false);
+            player2.SetActive(false);
+            player3.SetActive(false);
+            player4.SetActive(true);
         }
     }
 

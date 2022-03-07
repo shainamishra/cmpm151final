@@ -10,6 +10,11 @@ public class HumanMovement : MonoBehaviour
 
     public GameObject humanON;
 
+    public GameObject player1;
+    public GameObject player2;
+    public GameObject player3;
+    public GameObject player4;
+
     private Rigidbody2D rb;
     private bool facingRight = true;
     private float moveDirection = 0f;
@@ -32,6 +37,25 @@ public class HumanMovement : MonoBehaviour
 
             // Move
             move();
+
+            // swapping
+            if (Input.GetKeyDown("space"))
+            {
+                //swap();
+            }
+        }
+        
+    }
+
+    private void swap()
+    {
+        if (player2.activeSelf == true && (Input.GetKeyDown("space")))
+        {
+            Debug.Log("in human script 1");
+            player1.SetActive(false);
+            player2.SetActive(false);
+            player3.SetActive(true);
+            player4.SetActive(false);
         }
     }
 
@@ -67,18 +91,19 @@ public class HumanMovement : MonoBehaviour
         facingRight = !facingRight; //inverse boolean
         transform.Rotate(0f, 180f, 0f);
     }
+
     // Start is called before the first frame update
     void Start()
     {
         Application.runInBackground = true;
 
-        OSCHandler.Instance.Init();
+        //OSCHandler.Instance.Init();
     }
 
     void FixedUpdate() {
 
-		OSCHandler.Instance.UpdateLogs();
-		Dictionary<string, ServerLog> servers = new Dictionary<string, ServerLog>();
+		/*OSCHandler.Instance.UpdateLogs();
+		/Dictionary<string, ServerLog> servers = new Dictionary<string, ServerLog>();
 		servers = OSCHandler.Instance.Servers;
 
 		foreach (KeyValuePair<string, ServerLog> item in servers) {
@@ -93,5 +118,6 @@ public class HumanMovement : MonoBehaviour
 
 			}
 		}
+        */
     }
 }

@@ -9,6 +9,11 @@ public class FrogMovement : MonoBehaviour
 
     public GameObject frogON;
 
+    public GameObject player1;
+    public GameObject player2;
+    public GameObject player3;
+    public GameObject player4;
+
     private Rigidbody2D rb;
     private bool facingRight = true;
     private float moveDirection = 0f;
@@ -30,7 +35,26 @@ public class FrogMovement : MonoBehaviour
             animate();
 
             // Move
-            move();
+            move();   
+
+            // swapping
+            if (Input.GetKeyDown("space"))
+            {
+                //swap();
+            }
+        }
+        
+    }
+
+    void swap()
+    {
+        if (player4.activeSelf == true && (Input.GetKeyDown("space")))
+        {
+            Debug.Log("in frog script 1");
+            player4.SetActive(false);
+            player3.SetActive(false);
+            player2.SetActive(false);
+            player1.SetActive(true);
         }
     }
 

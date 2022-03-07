@@ -26388,6 +26388,7 @@ GameObject:
   - component: {fileID: 1142033401}
   - component: {fileID: 1142033400}
   - component: {fileID: 1142033399}
+  - component: {fileID: 1142033402}
   m_Layer: 0
   m_Name: Ninja Frog
   m_TagString: Player
@@ -26408,7 +26409,7 @@ Transform:
   m_Children:
   - {fileID: 1146160452}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1142033397
 SpriteRenderer:
@@ -26495,6 +26496,10 @@ MonoBehaviour:
   moveSpeed: 5
   animator: {fileID: 1142033398}
   frogON: {fileID: 1146160451}
+  player1: {fileID: 1852208977}
+  player2: {fileID: 829297105}
+  player3: {fileID: 282071700}
+  player4: {fileID: 1146160451}
 --- !u!61 &1142033400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26542,6 +26547,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1142033402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142033395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b09349cb1dd4cbcb884a3a30ec39d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 1852208977}
+  player2: {fileID: 829297105}
+  player3: {fileID: 282071700}
+  player4: {fileID: 1146160451}
 --- !u!1 &1146160451
 GameObject:
   m_ObjectHideFlags: 0
@@ -26638,6 +26659,7 @@ GameObject:
   - component: {fileID: 1188761080}
   - component: {fileID: 1188761079}
   - component: {fileID: 1188761078}
+  - component: {fileID: 1188761081}
   m_Layer: 0
   m_Name: Masked Hunter
   m_TagString: Player
@@ -26658,7 +26680,7 @@ Transform:
   m_Children:
   - {fileID: 282071701}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1188761076
 Animator:
@@ -26745,6 +26767,10 @@ MonoBehaviour:
   moveSpeed: 5
   animator: {fileID: 1188761076}
   hunterON: {fileID: 282071700}
+  player1: {fileID: 1852208977}
+  player2: {fileID: 829297105}
+  player3: {fileID: 282071700}
+  player4: {fileID: 1146160451}
 --- !u!61 &1188761079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26792,6 +26818,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1188761081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188761074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b09349cb1dd4cbcb884a3a30ec39d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 1852208977}
+  player2: {fileID: 829297105}
+  player3: {fileID: 282071700}
+  player4: {fileID: 1146160451}
 --- !u!1 &1278662196
 GameObject:
   m_ObjectHideFlags: 0
@@ -27661,9 +27703,10 @@ GameObject:
   - component: {fileID: 1827236747}
   - component: {fileID: 1827236748}
   - component: {fileID: 1827236749}
-  - component: {fileID: 1827236750}
   - component: {fileID: 1827236752}
   - component: {fileID: 1827236751}
+  - component: {fileID: 1827236750}
+  - component: {fileID: 1827236753}
   m_Layer: 0
   m_Name: Discord Mod
   m_TagString: Player
@@ -27684,7 +27727,7 @@ Transform:
   m_Children:
   - {fileID: 1852208978}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1827236748
 SpriteRenderer:
@@ -27771,6 +27814,10 @@ MonoBehaviour:
   moveSpeed: 5
   animator: {fileID: 1827236749}
   modON: {fileID: 1852208977}
+  player1: {fileID: 1852208977}
+  player2: {fileID: 829297105}
+  player3: {fileID: 282071700}
+  player4: {fileID: 1146160451}
 --- !u!61 &1827236751
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27818,6 +27865,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1827236753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827236746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b09349cb1dd4cbcb884a3a30ec39d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 1852208977}
+  player2: {fileID: 829297105}
+  player3: {fileID: 282071700}
+  player4: {fileID: 1146160451}
 --- !u!1 &1841835035
 GameObject:
   m_ObjectHideFlags: 0
@@ -28159,6 +28222,7 @@ GameObject:
   - component: {fileID: 1982311954}
   - component: {fileID: 1982311953}
   - component: {fileID: 1982311952}
+  - component: {fileID: 1982311955}
   m_Layer: 0
   m_Name: Finn the Human
   m_TagString: Player
@@ -28179,7 +28243,7 @@ Transform:
   m_Children:
   - {fileID: 829297106}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1982311950
 SpriteRenderer:
@@ -28266,6 +28330,10 @@ MonoBehaviour:
   moveSpeed: 5
   animator: {fileID: 1982311951}
   humanON: {fileID: 829297105}
+  player1: {fileID: 1852208977}
+  player2: {fileID: 829297105}
+  player3: {fileID: 282071700}
+  player4: {fileID: 1146160451}
 --- !u!61 &1982311953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28313,6 +28381,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1982311955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982311948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b09349cb1dd4cbcb884a3a30ec39d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 1852208977}
+  player2: {fileID: 829297105}
+  player3: {fileID: 282071700}
+  player4: {fileID: 1146160451}
 --- !u!1 &2004618061
 GameObject:
   m_ObjectHideFlags: 0

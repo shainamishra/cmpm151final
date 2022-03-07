@@ -9,6 +9,11 @@ public class ModMovement : MonoBehaviour
 
     public GameObject modON;
 
+    public GameObject player1;
+    public GameObject player2;
+    public GameObject player3;
+    public GameObject player4;
+
     private Rigidbody2D rb;
     private bool facingRight = true;
     private float moveDirection = 0f;
@@ -31,6 +36,24 @@ public class ModMovement : MonoBehaviour
 
             // Move
             move();
+
+            // swapping
+            if (Input.GetKeyDown("space"))
+            {
+                //swap();
+            }
+        }
+    }
+
+    void swap()
+    {
+        if (player1.activeSelf == true && (Input.GetKeyDown("space")))
+        {
+            Debug.Log("in mod script 1");
+            player1.SetActive(false);
+            player2.SetActive(true);
+            player3.SetActive(false);
+            player4.SetActive(false);
         }
     }
 
