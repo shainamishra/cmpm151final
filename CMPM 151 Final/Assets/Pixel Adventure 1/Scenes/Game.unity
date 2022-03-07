@@ -26343,7 +26343,7 @@ Transform:
   m_GameObject: {fileID: 1061326796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.28, z: 1}
   m_Children: []
   m_Father: {fileID: 1510035660}
   m_RootOrder: 0
@@ -26387,8 +26387,8 @@ GameObject:
   - component: {fileID: 1142033398}
   - component: {fileID: 1142033401}
   - component: {fileID: 1142033400}
-  - component: {fileID: 1142033399}
   - component: {fileID: 1142033402}
+  - component: {fileID: 1142033403}
   m_Layer: 0
   m_Name: Ninja Frog
   m_TagString: Player
@@ -26481,25 +26481,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1142033399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1142033395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66bee6dfd21709b4fa0379c58c765edf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  animator: {fileID: 1142033398}
-  frogON: {fileID: 1146160451}
-  player1: {fileID: 1852208977}
-  player2: {fileID: 829297105}
-  player3: {fileID: 282071700}
-  player4: {fileID: 1146160451}
 --- !u!61 &1142033400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26554,7 +26535,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142033395}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74b09349cb1dd4cbcb884a3a30ec39d0, type: 3}
   m_Name: 
@@ -26563,6 +26544,26 @@ MonoBehaviour:
   player2: {fileID: 829297105}
   player3: {fileID: 282071700}
   player4: {fileID: 1146160451}
+--- !u!114 &1142033403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142033395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7324c0421f3474292a573de5048007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  animator: {fileID: 1142033398}
+  playerON: {fileID: 1146160451}
+  modON: {fileID: 1852208977}
+  hunterON: {fileID: 282071700}
+  humanON: {fileID: 829297105}
+  frogON: {fileID: 1146160451}
+  order: 1
 --- !u!1 &1146160451
 GameObject:
   m_ObjectHideFlags: 0
@@ -26658,8 +26659,8 @@ GameObject:
   - component: {fileID: 1188761076}
   - component: {fileID: 1188761080}
   - component: {fileID: 1188761079}
-  - component: {fileID: 1188761078}
   - component: {fileID: 1188761081}
+  - component: {fileID: 1188761082}
   m_Layer: 0
   m_Name: Masked Hunter
   m_TagString: Player
@@ -26680,7 +26681,7 @@ Transform:
   m_Children:
   - {fileID: 282071701}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1188761076
 Animator:
@@ -26752,25 +26753,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1188761078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188761074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d873b3da2e051468edc1db962cdb76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  animator: {fileID: 1188761076}
-  hunterON: {fileID: 282071700}
-  player1: {fileID: 1852208977}
-  player2: {fileID: 829297105}
-  player3: {fileID: 282071700}
-  player4: {fileID: 1146160451}
 --- !u!61 &1188761079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26825,7 +26807,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188761074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74b09349cb1dd4cbcb884a3a30ec39d0, type: 3}
   m_Name: 
@@ -26834,6 +26816,26 @@ MonoBehaviour:
   player2: {fileID: 829297105}
   player3: {fileID: 282071700}
   player4: {fileID: 1146160451}
+--- !u!114 &1188761082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188761074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7324c0421f3474292a573de5048007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  animator: {fileID: 1188761076}
+  playerON: {fileID: 282071700}
+  modON: {fileID: 1852208977}
+  hunterON: {fileID: 282071700}
+  humanON: {fileID: 829297105}
+  frogON: {fileID: 1146160451}
+  order: 1
 --- !u!1 &1278662196
 GameObject:
   m_ObjectHideFlags: 0
@@ -27705,8 +27707,8 @@ GameObject:
   - component: {fileID: 1827236749}
   - component: {fileID: 1827236752}
   - component: {fileID: 1827236751}
-  - component: {fileID: 1827236750}
   - component: {fileID: 1827236753}
+  - component: {fileID: 1827236754}
   m_Layer: 0
   m_Name: Discord Mod
   m_TagString: Player
@@ -27799,25 +27801,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1827236750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827236746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54b98e250d65fb947ab13868c6f9a39b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  animator: {fileID: 1827236749}
-  modON: {fileID: 1852208977}
-  player1: {fileID: 1852208977}
-  player2: {fileID: 829297105}
-  player3: {fileID: 282071700}
-  player4: {fileID: 1146160451}
 --- !u!61 &1827236751
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27872,7 +27855,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827236746}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74b09349cb1dd4cbcb884a3a30ec39d0, type: 3}
   m_Name: 
@@ -27881,6 +27864,26 @@ MonoBehaviour:
   player2: {fileID: 829297105}
   player3: {fileID: 282071700}
   player4: {fileID: 1146160451}
+--- !u!114 &1827236754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827236746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7324c0421f3474292a573de5048007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  animator: {fileID: 1827236749}
+  playerON: {fileID: 1852208977}
+  modON: {fileID: 1852208977}
+  hunterON: {fileID: 282071700}
+  humanON: {fileID: 829297105}
+  frogON: {fileID: 1146160451}
+  order: 1
 --- !u!1 &1841835035
 GameObject:
   m_ObjectHideFlags: 0
@@ -27933,7 +27936,7 @@ Transform:
   m_GameObject: {fileID: 1841835035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -47, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.3, z: 1}
   m_Children: []
   m_Father: {fileID: 1510035660}
   m_RootOrder: 1
@@ -27954,7 +27957,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1852208978
 Transform:
   m_ObjectHideFlags: 0
@@ -28221,8 +28224,8 @@ GameObject:
   - component: {fileID: 1982311951}
   - component: {fileID: 1982311954}
   - component: {fileID: 1982311953}
-  - component: {fileID: 1982311952}
   - component: {fileID: 1982311955}
+  - component: {fileID: 1982311956}
   m_Layer: 0
   m_Name: Finn the Human
   m_TagString: Player
@@ -28243,7 +28246,7 @@ Transform:
   m_Children:
   - {fileID: 829297106}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1982311950
 SpriteRenderer:
@@ -28315,25 +28318,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1982311952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1982311948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1572903c35352424cbe6c64f4b6c037f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  animator: {fileID: 1982311951}
-  humanON: {fileID: 829297105}
-  player1: {fileID: 1852208977}
-  player2: {fileID: 829297105}
-  player3: {fileID: 282071700}
-  player4: {fileID: 1146160451}
 --- !u!61 &1982311953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28388,7 +28372,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982311948}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74b09349cb1dd4cbcb884a3a30ec39d0, type: 3}
   m_Name: 
@@ -28397,6 +28381,26 @@ MonoBehaviour:
   player2: {fileID: 829297105}
   player3: {fileID: 282071700}
   player4: {fileID: 1146160451}
+--- !u!114 &1982311956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982311948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7324c0421f3474292a573de5048007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  animator: {fileID: 1982311951}
+  playerON: {fileID: 829297105}
+  modON: {fileID: 1852208977}
+  hunterON: {fileID: 282071700}
+  humanON: {fileID: 829297105}
+  frogON: {fileID: 1146160451}
+  order: 1
 --- !u!1 &2004618061
 GameObject:
   m_ObjectHideFlags: 0
@@ -28448,7 +28452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004618061}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.5, y: 16.165678, z: 0}
+  m_LocalPosition: {x: -23.5, y: 19.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1510035660}
