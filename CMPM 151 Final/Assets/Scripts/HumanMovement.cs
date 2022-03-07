@@ -86,11 +86,6 @@ public class HumanMovement : MonoBehaviour
 			// show the last received from the log in the Debug console
 			if (item.Value.log.Count > 0) {
 				int lastPacketIndex = item.Value.packets.Count - 1;
-
-				//get address and data packet
-				countText.text = item.Value.packets [lastPacketIndex].Address.ToString ();
-				countText.text += item.Value.packets [lastPacketIndex].Data [0].ToString ();
-
 			}
 		}
     }
