@@ -26000,7 +26000,7 @@ GameObject:
   - component: {fileID: 328796572}
   m_Layer: 0
   m_Name: Bananas
-  m_TagString: Untagged
+  m_TagString: fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26471,7 +26471,7 @@ GameObject:
   - component: {fileID: 937986133}
   m_Layer: 0
   m_Name: Cherries
-  m_TagString: Untagged
+  m_TagString: fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27327,7 +27327,7 @@ GameObject:
   - component: {fileID: 1278662201}
   m_Layer: 0
   m_Name: Kiwi
-  m_TagString: Untagged
+  m_TagString: fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27470,7 +27470,7 @@ GameObject:
   - component: {fileID: 1350898389}
   m_Layer: 0
   m_Name: Orange
-  m_TagString: Untagged
+  m_TagString: fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27736,7 +27736,7 @@ GameObject:
   - component: {fileID: 1395104851}
   m_Layer: 0
   m_Name: Strawberry
-  m_TagString: Untagged
+  m_TagString: fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27912,7 +27912,7 @@ GameObject:
   - component: {fileID: 1587429753}
   m_Layer: 0
   m_Name: Apple
-  m_TagString: Untagged
+  m_TagString: fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28055,7 +28055,7 @@ GameObject:
   - component: {fileID: 1687621607}
   m_Layer: 0
   m_Name: Pineapple
-  m_TagString: Untagged
+  m_TagString: fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28928,7 +28928,7 @@ GameObject:
   - component: {fileID: 1926238393}
   m_Layer: 0
   m_Name: Melon
-  m_TagString: Untagged
+  m_TagString: fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
