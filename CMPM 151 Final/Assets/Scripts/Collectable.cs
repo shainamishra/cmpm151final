@@ -24,7 +24,6 @@ public class Collectable : MonoBehaviour
         {
             animator.Play("Collected");
             StartCoroutine(Collect());
-            
         }
     }
     IEnumerator Collect()
