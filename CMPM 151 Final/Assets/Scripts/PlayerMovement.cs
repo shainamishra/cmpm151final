@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityOSC;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
     {
         modON.SetActive(true);
         rb = GetComponent<Rigidbody2D>(); // will look for a component on this GameObject (what the script is attached to) of type Rigidbody2D
+    }
+
+    private void Start() {
+        OSCHandler.Instance.Init();
     }
 
     // Update is called once per frame
@@ -57,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
             hunterON.SetActive(false);
             humanON.SetActive(false);
             frogON.SetActive(false);
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/mod", 1);
         }
         if (order % 4 == 2)
         {
@@ -64,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
             hunterON.SetActive(true);
             humanON.SetActive(false);
             frogON.SetActive(false);
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/hunter", 1);
         }
         if (order % 4 == 3)
         {
@@ -71,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
             hunterON.SetActive(false);
             humanON.SetActive(true);
             frogON.SetActive(false);
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/finn", 1);
         }
         if (order % 4 == 0)
         {
@@ -78,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
             hunterON.SetActive(false);
             humanON.SetActive(false);
             frogON.SetActive(true);
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/frog", 1);
         }
     }
 
@@ -87,7 +96,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown("w"))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector3(0, 10, 0);
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/jump", 1);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.tag == "fruit")
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/fruit", 1);
     }
 
     private void animate()
