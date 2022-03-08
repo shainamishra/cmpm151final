@@ -35,7 +35,7 @@ public class Spikes : MonoBehaviour
         transition.SetTrigger("Start");
 
         // wait for x amount of seconds
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
 
         // load next scene
         SceneManager.LoadScene(1);
