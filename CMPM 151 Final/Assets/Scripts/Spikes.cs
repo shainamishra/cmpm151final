@@ -20,6 +20,7 @@ public class Spikes : MonoBehaviour
         if(GameObject.FindGameObjectsWithTag("fruit").Length == 0) {
             x = 1;
             StartCoroutine(Collect());
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/win", 1);
         }
     }
 
@@ -28,6 +29,7 @@ public class Spikes : MonoBehaviour
         if (collision.gameObject.tag == "Player") 
         {
             StartCoroutine(Collect());
+            OSCHandler.Instance.SendMessageToClient("pd", "/unity/lose", 1);
         }
     }
 
@@ -43,5 +45,7 @@ public class Spikes : MonoBehaviour
 
         // load next scene
         SceneManager.LoadScene(1 + x);
+
+        
     }
 }

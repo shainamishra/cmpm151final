@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private bool facingRight = true;
     private float moveDirection = 0f;
+    private bool _isPlaying = false;
+    private bool _isWin = false;
 
     // Awake is called after all objects are initialized. Called in random order
     private void Awake()
@@ -35,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!_isPlaying) {
+            swap();
+            _isPlaying = true;
+        }
+
         // swapping
         if (Input.GetKeyDown("space"))
         {
@@ -103,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "fruit")
             OSCHandler.Instance.SendMessageToClient("pd", "/unity/fruit", 1);
+        
     }
 
     private void animate()
@@ -115,6 +123,10 @@ public class PlayerMovement : MonoBehaviour
         {
             flipChara();
         }
+    }
+
+    private void OnApplicationQuit() {
+        OSCHandler.Instance.SendMessageToClient("pd", "/unity/stop", 1);
     }
 
     private void processInputs()
