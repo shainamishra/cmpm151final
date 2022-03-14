@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Pixel Adventure 1/Scenes/Game.unity
+    path: Assets/Scenes/Game.unity
     guid: d3ace8b9830d3b248871bf0562f688e1
   - enabled: 1
-    path: Assets/Pixel Adventure 1/Scenes/End.unity
+    path: Assets/Scenes/Lose.unity
     guid: 47d8583e596f646129ace5ea4e694fdb
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: d765dd877ea0943deb2e665c7f79a8ea
   m_configObjects: {}

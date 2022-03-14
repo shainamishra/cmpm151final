@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Spikes : MonoBehaviour
 {
     public Animator transition;
+    private int x = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,10 @@ public class Spikes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(GameObject.FindGameObjectsWithTag("fruit").Length == 0) {
+            x = 1;
+            StartCoroutine(Collect());
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,6 +42,6 @@ public class Spikes : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         // load next scene
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1 + x);
     }
 }
